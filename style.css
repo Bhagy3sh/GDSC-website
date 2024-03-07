@@ -1,0 +1,403 @@
+
+@font-face{
+    font-family:'GoogleSans';
+    src: url("./assets/WebWeave Resource Material/MediaKIT/Font-20240226T150837Z-001/Font/GoogleSans-Regular-v1.27.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background:white;
+    background-position: center;
+    font-family: 'GoogleSans';
+}
+
+/*Nav Bar*/
+
+nav{
+    background-color: rgb(79, 167, 255);
+    box-shadow: 3px 3px 3px rgb(0, 140, 255,0.1);
+    
+}
+
+nav ul img{
+    height: 25px;
+    width: auto;
+}
+
+nav img.mobile-icon{
+    display: none;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover{
+    background-color:rgb(56, 156, 255);
+    cursor: pointer;
+}
+
+nav li:first-child{
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-right: auto;
+}
+
+.sidebar{
+    filter: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(79, 167, 255);
+    backdrop-filter: blur(76px);
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+nav svg{
+    fill:white;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+}
+
+/*Page1*/
+
+.homepage{
+    height: 100vh;
+    display: flex;
+    align-items: column;
+    padding: 0 5%;
+    padding-top: 5%;
+}
+
+.homepage-content{
+    max-width: 700px;
+}
+
+.homepage-content p{
+    font-size: 20px;
+}
+
+.homepage-content h1{
+    color: black;
+    font-size: 45px;
+    margin: 5px 0 5px;
+}
+
+.homepage-content .gdsc_logo{
+    height: 10%;
+    width: auto;
+}
+
+.homepage-content .social{
+    display: flex;
+    flex-direction: row;
+    column-gap: 7%;
+    align-items: flex-start;
+}
+
+.homepage-content .social{
+    text-decoration: none;
+    color: black;
+}
+
+.social ion-icon{
+    font-size: 40px;
+    margin-left: 10%;
+    color: black;
+    margin-right: -60px;
+    transition: .3s ease;
+}
+
+.social ion-icon:hover{
+    color: rgb(79, 167, 255);
+}
+
+.clg_logo img{
+    position: absolute;
+    right: 3%;
+    border: solid;
+    border-color: rgb(79, 167, 255);
+    border-width: 20px 20px 20px 20px;   
+}
+
+/*Page 2 - Team*/
+
+.page2{
+    min-height: 90vh;
+    background:white;
+    background-position: center;
+    font-family: 'GoogleSans';
+    margin-top: 75px;
+}
+
+.team_title{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+.row{
+    border: 0px solid rgb(234, 67, 53);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 2em 1em;
+    text-align: center;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.column{
+    width: 100%;
+    border: 0px solid black;
+    max-width: 100%;
+    flex-flow: row;
+}
+
+._team_title{
+    text-align: center;
+    padding-bottom: 30px;
+    width: 100%;
+    font-size: 40px;
+    color: black;
+}
+
+.card{
+    box-shadow: 0 0 35.2px rgb(0,0,0,0.1) ;
+    padding: 56px 16px;
+    border-radius: 8.6px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card .image-holder{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(234, 67, 53);
+    padding: 8px;
+    border-radius: 50%;
+    margin: 0 auto 32px auto;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 50%;
+    transform: scale();
+}
+
+.card h3{
+    font-weight: 1000;
+}
+
+.card p{
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 8px 0 32px 0;
+    letter-spacing: 1.5px;
+}
+
+.card:hover{
+    background: rgb(234, 67, 53);
+    color: white;
+}
+.card:hover .image-holder {
+    transform: scale(1.15);
+  }
+
+ /*Page 3*/
+
+.page3{
+    min-height: 90vh;
+    background:white;
+    background-position: center;
+    margin-top: 75px;
+    box-sizing: border-box;
+}
+
+.blog-card{
+    position: absolute;
+    height: 100%;
+    width: 85%;
+    max-width: 950px;
+    margin: auto;
+    background: rgb(251,188,4);
+    border-radius: 25px;
+}
+
+.blog-card .blog-card-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card-content img{
+    height: 360px;
+    width: auto;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+
+.img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.blog-article{
+    padding: 0 20px 0 35px;
+    width: 530px;
+    margin-left: 50px;
+
+}
+
+.blog-article span{
+    display: block;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.blog-article .article-title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.blog-article p{
+    font-size: 19px;
+    color: rgb(37, 37, 37);
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.blog-view button{
+    display: inline-flex;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background: rgb(222, 152, 0);
+    outline: none;
+}
+
+.blog-view button:hover{
+    background-color: rgb(251,188,4);
+}
+
+@media screen and (max-width:900px){
+    .hideOnMobile{
+        display: none;
+    }
+    
+    .menu-button{
+        display: block;
+    }
+
+    nav li:first-child{
+        padding-top: 10px;
+        padding-left: 5px;
+        margin-right: auto;
+    }
+
+    .navbar img{
+       display: none;
+    }
+    
+    nav img.mobile-icon{
+        height: 35px;
+        width: auto;
+        display: grid;
+        justify-content: space-between;
+        align-self: flex-start;
+        padding-right: 54vw;
+        padding-top: 1.9vh;
+    }
+
+    .clg_logo img{
+        display:none;
+        position: absolute;
+        right: 3%;
+        border: solid;
+        border-color: rgb(79, 167, 255);
+        border-width: 20px 20px 20px 20px;   
+    }
+
+    /*Page 2*/
+
+    .team_card{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    section {
+      padding: 1em 7em;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em;
+    }
+    .card {
+      padding: 5em 1em;
+    }
+    .column {
+      flex: 0 0 32.55%;
+      max-width: 100.33%;
+      padding: 0 -19em;
+    }
+  }
+
+
