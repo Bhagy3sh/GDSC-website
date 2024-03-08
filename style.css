@@ -413,7 +413,7 @@ nav svg{
         justify-content: space-between;
         align-self: flex-start;
         padding-right: 54vw;
-        padding-top: 1.9vh;
+        padding-top: 1.0vh;
     }
 
     .clg_logo img{
@@ -485,7 +485,7 @@ nav svg{
       }
       
       .blog-card-content{
-            width: 100%;
+            width: 90%;
             background-color: rgba(251, 188, 4);
             border-radius: 25px;
             margin: 0;
@@ -535,12 +535,6 @@ nav svg{
             margin: 10px 0;
       }
       
-      /* Additional media query for extra small screens */
-      @media only screen and (max-width: 768px) {
-        .blog-card-content {
-          width: 90%;
-        }
-      }
 
       /*Footer*/
 
@@ -551,7 +545,7 @@ nav svg{
     color: white;
     font-family: 'GoogleSans';
     position: absolute;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -578,12 +572,16 @@ nav svg{
 .footer-content p{
   padding-bottom: 25px;
   font-size: 14px;
+} 
 }
-    
-    
-    
-    
+
+@media screen and (max-width:667px){
+    nav img.mobile-icon{
+        padding-left: 5%;
+    }
+
 }
+
 
 @media screen and (min-width: 768px) {
     section {
