@@ -9,6 +9,7 @@
     padding: 0;
 }
 
+
 body{
     min-height: 100vh;
     background:white;
@@ -20,9 +21,15 @@ body{
 /*Nav Bar*/
 
 nav{
+    height: 10vh;   
+}
+
+.navbar{
+    display: flex;
+    position: fixed;
     background-color: rgb(79, 167, 255);
-    box-shadow: 3px 3px 3px rgb(0, 140, 255,0.1);
-    
+    box-shadow: 3px 3px 3px rgb(0, 140, 255,0.1); 
+    z-index: 999;
 }
 
 nav ul img{
@@ -100,10 +107,16 @@ nav svg{
     display: none;
 }
 
+.mobile_logo{
+    display: none;
+    height: 50vh;
+}
+
+
 /*Page1*/
 
 .homepage{
-    height: 120vh;
+    height: 50vh;
     display: flex;
     align-items: column;
     padding: 0 5%;
@@ -134,9 +147,6 @@ nav svg{
     flex-direction: row;
     column-gap: 7%;
     align-items: flex-start;
-}
-
-.homepage-content .social{
     text-decoration: none;
     color: black;
 }
@@ -153,12 +163,22 @@ nav svg{
     color: rgb(79, 167, 255);
 }
 
+.mobile_logo{
+    height: 0vh;
+}
+
+
 .clg_logo img{
     position: absolute;
     right: 3%;
     border: solid;
     border-color: rgb(79, 167, 255);
     border-width: 20px 20px 20px 20px;   
+}
+
+
+.clg_logo_mobile{
+    display: none;  
 }
 
 /*Page 2 - Team*/
@@ -168,7 +188,12 @@ nav svg{
     background:white;
     background-position: center;
     font-family: 'GoogleSans';
-    margin-top: 75px;
+    margin-top: 25%;
+
+    .navbar{
+        display: none;
+    }
+
 }
 
 .team_title{
@@ -279,10 +304,11 @@ nav svg{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    row-gap: 0%;
+    row-gap: 2%;
     margin: 20px 0px;
     flex-wrap: nowrap;
 }
+
 .blog-card h1{
     padding-top: 10%;
 }
@@ -344,7 +370,8 @@ nav svg{
 
 .footnote{
     display: flex;
-    min-height: 45vh;
+    min-height: 40vh;
+    width: auto;
     background:white;
     color: white;
     background-position: center;
@@ -356,11 +383,12 @@ nav svg{
 }
 
 .footnote .social{
+    max-width: 78%;
     color: white;
     display: flex;
     flex-direction: row;
-    column-gap: 10%;
-    align-items: flex-start;
+    column-gap: 20%;
+    justify-content: flex-start;
     flex-wrap: nowrap;
 }
 
@@ -369,14 +397,19 @@ nav svg{
     margin-bottom: 10px;
     height: 13%;
     width: auto;
-
 }
 
+.footer-logo{
+    height: 80%;
+    max-width: 95%;
+}
 .footer-content .footer-title{
+    max-width: 100%;
     color: white;
     font-size: 30px;
 
 }
+
 
 .footer-content p{
     padding-bottom: 25px;
@@ -388,6 +421,12 @@ nav svg{
 
 
 @media screen and (max-width:900px){
+
+    body{
+        margin: 0;
+        width: 100%;
+    }
+
     .hideOnMobile{
         display: none;
     }
@@ -402,6 +441,14 @@ nav svg{
         margin-right: auto;
     }
 
+    nav{
+        height: 10vh;   
+    }
+    
+    .navbar{
+        position: fixed;
+    }
+
     .navbar img{
        display: none;
     }
@@ -411,19 +458,33 @@ nav svg{
         width: auto;
         display: grid;
         justify-content: space-between;
-        align-self: flex-start;
-        padding-right: 54vw;
+        align-self: center;
+        padding-right: 58vw;
         padding-top: 1.0vh;
     }
 
     .clg_logo img{
-        display:none;
+        display: none;
+    }
+
+    .mobile_logo{
+        display: flex;
+        height: 50vh;
+    }
+
+    .clg_logo_mobile img{
+        align-self: center;
+        height: 33%;
+        width: auto;
+        display: flex;
         position: absolute;
-        right: 3%;
+        align-content: center;
+        margin-top: 65%;
         border: solid;
         border-color: rgb(79, 167, 255);
-        border-width: 20px 20px 20px 20px;   
+        border-width: 20px 20px 20px 20px;  
     }
+
 
     /*Page 2*/
 
@@ -432,18 +493,14 @@ nav svg{
         flex-direction: column;
     }
 
-    .footnote{
-        display: flex;
-        min-height: 45vh;
-        background:white;
-        color: white;
-        background-position: center;
-        font-family: 'GoogleSans';
-        background: rgb(15, 157, 88);
-        position: absolute;
-        left: 0;
-        right: 0;
+    .team_title{
+        margin-top: 10%;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        position: relative;
     }
+
 
     /*Page 3*/
     .page3{
@@ -474,7 +531,6 @@ nav svg{
       
       .blog-card{
             display: flex;
-            flex-direction: column;
             width: 100%;
             margin: 20px 0;
       }
@@ -550,18 +606,16 @@ nav svg{
 }
 
 .footnote .social{
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 23%;
+    display:flex;
+    justify-content: center;
+    margin-top: 5%;
+    padding-right: 8vw;
 }
 
 .footer-content img{
     margin-bottom: 10px;
     height: auto;
-    width: 30px;
+    width: 15%;
 }
 
 .footer-content .footer-title{
@@ -573,6 +627,16 @@ nav svg{
   padding-bottom: 25px;
   font-size: 14px;
 } 
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 80%;
+}
+
+
 }
 
 @media screen and (max-width:667px){
@@ -580,13 +644,65 @@ nav svg{
         padding-left: 5%;
     }
 
-}
+    .homepage-content .social{
+        display: flex;
+        flex-direction: row;
+        column-gap: 15%;
+        align-items: flex-start;
+        text-decoration: none;
+        color: black;
+    }
 
+    .team_title{
+        margin-top: 60%;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+    .mobile_logo{
+        display: flex;
+        height: 30vh;
+    }
+
+    .clg_logo_mobile img{
+        align-self: center;
+        height: 30%;
+        width: auto;
+        display: flex;
+        position: absolute;
+        align-content: center;
+        margin-top: 25%;
+        border: solid;
+        border-color: rgb(79, 167, 255);
+        border-width: 20px 20px 20px 20px;  
+    }
+
+
+}
 
 @media screen and (min-width: 768px) {
     section {
       padding: 1em 7em;
     }
+
+    .clg_logo_mobile img{
+        align-self: center;
+        height: 33%;
+        width: auto;
+        display: flex;
+        position: absolute;
+        align-content: center;
+        border: solid;
+        border-color: rgb(79, 167, 255);
+        border-width: 20px 20px 20px 20px;  
+    }
+
+    .mobile_logo{
+        height: 20vh;
+    }
+
   }
   @media screen and (min-width: 992px) {
     section {
@@ -599,6 +715,24 @@ nav svg{
       flex: 0 0 32.55%;
       max-width: 100.33%;
       padding: 0 -19em;
+    }
+
+    .mobile_logo{
+        height: 10vh;
+        display: flex;
+    }
+
+    .clg_logo_mobile img{
+        align-self: center;
+        height: 33%;
+        width: auto;
+        display: flex;
+        position: absolute;
+        align-content: center;
+        margin-top: 65%;
+        border: solid;
+        border-color: rgb(79, 167, 255);
+        border-width: 20px 20px 20px 20px;  
     }
 
   }
